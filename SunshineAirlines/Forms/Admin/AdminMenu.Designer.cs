@@ -24,11 +24,11 @@
 		/// </summary>
 		private void InitializeComponent() {
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-			this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.flightScheduleManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.ticketStatisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.userManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.logoutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -42,23 +42,9 @@
             this.exitToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(800, 25);
+			this.menuStrip1.Size = new System.Drawing.Size(1008, 25);
 			this.menuStrip1.TabIndex = 2;
 			this.menuStrip1.Text = "menuStrip1";
-			// 
-			// logoutToolStripMenuItem
-			// 
-			this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-			this.logoutToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
-			this.logoutToolStripMenuItem.Text = "Logout";
-			this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
-			// 
-			// exitToolStripMenuItem
-			// 
-			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			this.exitToolStripMenuItem.Size = new System.Drawing.Size(40, 21);
-			this.exitToolStripMenuItem.Text = "Exit";
-			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
 			// 
 			// flightScheduleManagementToolStripMenuItem
 			// 
@@ -78,11 +64,25 @@
 			this.userManagementToolStripMenuItem.Size = new System.Drawing.Size(128, 21);
 			this.userManagementToolStripMenuItem.Text = "User Management";
 			// 
+			// logoutToolStripMenuItem
+			// 
+			this.logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
+			this.logoutToolStripMenuItem.Size = new System.Drawing.Size(61, 21);
+			this.logoutToolStripMenuItem.Text = "Logout";
+			this.logoutToolStripMenuItem.Click += new System.EventHandler(this.logoutToolStripMenuItem_Click);
+			// 
+			// exitToolStripMenuItem
+			// 
+			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+			this.exitToolStripMenuItem.Size = new System.Drawing.Size(40, 21);
+			this.exitToolStripMenuItem.Text = "Exit";
+			this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+			// 
 			// AdminMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(800, 464);
+			this.ClientSize = new System.Drawing.Size(1008, 537);
 			this.Controls.Add(this.menuStrip1);
 			this.IsMdiContainer = true;
 			this.MainMenuStrip = this.menuStrip1;

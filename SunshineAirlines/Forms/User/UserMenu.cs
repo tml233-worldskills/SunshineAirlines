@@ -24,5 +24,12 @@ namespace SunshineAirlines.Forms.User {
 			Login.Quitting = true;
 			Close();
 		}
+
+		private void searchFlightsToolStripMenuItem_Click(object sender, EventArgs e) {
+			var form = new SearchFlights(uid) {
+				MdiParent = this
+			};
+			form.Show();
+		}
 	}
 }
