@@ -11,6 +11,8 @@ using System.IO;
 
 namespace SunshineAirlines {
 	public static class Utils {
+		public static string ResourceRoot = "./Resources/";
+
 		public static (SqlConnection, SqlCommand) Prepare(string sql, params object[] args) {
 			var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["db"].ConnectionString);
 			var cmd = new SqlCommand(sql, conn);
