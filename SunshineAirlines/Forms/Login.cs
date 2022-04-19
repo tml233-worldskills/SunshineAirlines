@@ -52,8 +52,12 @@ namespace SunshineAirlines.Forms {
 			if (File.Exists(SessionFilePath)) {
 				var json=File.ReadAllText(SessionFilePath);
 				var session = Utils.DeserializeFromJson<SessionData>(json);
-				inputEmail.Text = session.email;
-				TryLogin(session.email, session.password);
+				if (DateTimeOffset.Now <= session.saveTime.AddDays(7)) {
+					inputEmail.Text = session.email;
+					TryLogin(session.email, session.password);
+				} else {
+					File.Delete(SessionFilePath);
+				}
 			}
 		}
 
@@ -63,6 +67,8 @@ namespace SunshineAirlines.Forms {
 			public string email;
 			[DataMember]
 			public string password;
+			[DataMember]
+			public DateTimeOffset saveTime;
 		}
 
 		int failTimes = 0;
@@ -108,7 +114,8 @@ namespace SunshineAirlines.Forms {
 			if (inputRemember.Checked) {
 				var json = Utils.SerializeToJson(new SessionData {
 					email = email,
-					password = pwd
+					password = pwd,
+					saveTime = DateTimeOffset.Now
 				});
 				File.WriteAllText(SessionFilePath, json);
 			}
