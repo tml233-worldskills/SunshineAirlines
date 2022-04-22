@@ -54,6 +54,7 @@
 			this.checkBox.Size = new System.Drawing.Size(15, 14);
 			this.checkBox.TabIndex = 1;
 			this.checkBox.UseVisualStyleBackColor = true;
+			this.checkBox.CheckedChanged += new System.EventHandler(this.checkBox_CheckedChanged);
 			// 
 			// pictureBox
 			// 
@@ -76,6 +77,7 @@
 			this.numberBox.Size = new System.Drawing.Size(64, 32);
 			this.numberBox.TabIndex = 3;
 			this.numberBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.numberBox.ValueChanged += new System.EventHandler(this.numberBox_ValueChanged);
 			// 
 			// lblPrice
 			// 

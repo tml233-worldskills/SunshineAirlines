@@ -31,5 +31,12 @@ namespace SunshineAirlines.Forms.User {
 			};
 			form.Show();
 		}
+
+		private void foodServicesToolStripMenuItem_Click(object sender, EventArgs e) {
+			var form = new FoodServices(uid) {
+				MdiParent = this
+			};
+			form.Show();
+		}
 	}
 }

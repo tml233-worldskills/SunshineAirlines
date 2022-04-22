@@ -58,6 +58,7 @@
 			this.foodServicesToolStripMenuItem.Name = "foodServicesToolStripMenuItem";
 			this.foodServicesToolStripMenuItem.Size = new System.Drawing.Size(101, 21);
 			this.foodServicesToolStripMenuItem.Text = "Food Services";
+			this.foodServicesToolStripMenuItem.Click += new System.EventHandler(this.foodServicesToolStripMenuItem_Click);
 			// 
 			// flightStatusToolStripMenuItem
 			// 

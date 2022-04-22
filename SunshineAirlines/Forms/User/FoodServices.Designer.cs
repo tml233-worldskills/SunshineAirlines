@@ -25,11 +25,11 @@
 		private void InitializeComponent() {
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.label2 = new System.Windows.Forms.Label();
-			this.comboIdType = new System.Windows.Forms.ComboBox();
-			this.label3 = new System.Windows.Forms.Label();
-			this.inputIDTypeNumber = new System.Windows.Forms.TextBox();
 			this.btnSearch = new System.Windows.Forms.Button();
+			this.inputIDTypeNumber = new System.Windows.Forms.TextBox();
+			this.label3 = new System.Windows.Forms.Label();
+			this.comboIdType = new System.Windows.Forms.ComboBox();
+			this.label2 = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.btnLoad = new System.Windows.Forms.Button();
 			this.comboFlight = new System.Windows.Forms.ComboBox();
@@ -69,27 +69,24 @@
 			this.panel1.Size = new System.Drawing.Size(873, 63);
 			this.panel1.TabIndex = 3;
 			// 
-			// label2
+			// btnSearch
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(3, 0);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(70, 24);
-			this.label2.TabIndex = 0;
-			this.label2.Text = "ID Type:";
+			this.btnSearch.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSearch.Location = new System.Drawing.Point(369, 4);
+			this.btnSearch.Name = "btnSearch";
+			this.btnSearch.Size = new System.Drawing.Size(134, 51);
+			this.btnSearch.TabIndex = 4;
+			this.btnSearch.Text = "Search";
+			this.btnSearch.UseVisualStyleBackColor = true;
+			this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
 			// 
-			// comboIdType
+			// inputIDTypeNumber
 			// 
-			this.comboIdType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.comboIdType.Font = new System.Drawing.Font("TeXGyreAdventor", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.comboIdType.FormattingEnabled = true;
-			this.comboIdType.Items.AddRange(new object[] {
-            "ID Card"});
-			this.comboIdType.Location = new System.Drawing.Point(7, 28);
-			this.comboIdType.Name = "comboIdType";
-			this.comboIdType.Size = new System.Drawing.Size(144, 27);
-			this.comboIdType.TabIndex = 1;
+			this.inputIDTypeNumber.Font = new System.Drawing.Font("TeXGyreAdventor", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.inputIDTypeNumber.Location = new System.Drawing.Point(161, 28);
+			this.inputIDTypeNumber.Name = "inputIDTypeNumber";
+			this.inputIDTypeNumber.Size = new System.Drawing.Size(181, 26);
+			this.inputIDTypeNumber.TabIndex = 3;
 			// 
 			// label3
 			// 
@@ -101,23 +98,28 @@
 			this.label3.TabIndex = 2;
 			this.label3.Text = "ID Type Number:";
 			// 
-			// inputIDTypeNumber
+			// comboIdType
 			// 
-			this.inputIDTypeNumber.Font = new System.Drawing.Font("TeXGyreAdventor", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.inputIDTypeNumber.Location = new System.Drawing.Point(161, 28);
-			this.inputIDTypeNumber.Name = "inputIDTypeNumber";
-			this.inputIDTypeNumber.Size = new System.Drawing.Size(181, 26);
-			this.inputIDTypeNumber.TabIndex = 3;
+			this.comboIdType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.comboIdType.Font = new System.Drawing.Font("TeXGyreAdventor", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.comboIdType.FormattingEnabled = true;
+			this.comboIdType.Items.AddRange(new object[] {
+            "ID Card",
+            "Passport"});
+			this.comboIdType.Location = new System.Drawing.Point(7, 28);
+			this.comboIdType.Name = "comboIdType";
+			this.comboIdType.Size = new System.Drawing.Size(144, 27);
+			this.comboIdType.TabIndex = 1;
 			// 
-			// btnSearch
+			// label2
 			// 
-			this.btnSearch.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnSearch.Location = new System.Drawing.Point(369, 4);
-			this.btnSearch.Name = "btnSearch";
-			this.btnSearch.Size = new System.Drawing.Size(134, 51);
-			this.btnSearch.TabIndex = 4;
-			this.btnSearch.Text = "Search";
-			this.btnSearch.UseVisualStyleBackColor = true;
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(3, 0);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(70, 24);
+			this.label2.TabIndex = 0;
+			this.label2.Text = "ID Type:";
 			// 
 			// panel2
 			// 
@@ -141,14 +143,13 @@
 			this.btnLoad.TabIndex = 4;
 			this.btnLoad.Text = "Load";
 			this.btnLoad.UseVisualStyleBackColor = true;
+			this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
 			// 
 			// comboFlight
 			// 
 			this.comboFlight.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.comboFlight.Font = new System.Drawing.Font("TeXGyreAdventor", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.comboFlight.FormattingEnabled = true;
-			this.comboFlight.Items.AddRange(new object[] {
-            "ID Card"});
 			this.comboFlight.Location = new System.Drawing.Point(7, 28);
 			this.comboFlight.Name = "comboFlight";
 			this.comboFlight.Size = new System.Drawing.Size(335, 27);
@@ -197,6 +198,7 @@
 			this.button1.TabIndex = 5;
 			this.button1.Text = "Confirm";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// button2
 			// 
@@ -224,6 +226,7 @@
 			this.Controls.Add(this.label1);
 			this.Name = "FoodServices";
 			this.Text = "FoodServices";
+			this.Load += new System.EventHandler(this.FoodServices_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			this.panel2.ResumeLayout(false);
