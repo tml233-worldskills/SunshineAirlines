@@ -51,7 +51,12 @@ namespace SunshineAirlines.Forms.Admin {
 			UpdateData(role, inputName.Text.Trim());
 		}
 
+		int lastRole = -1;
+		string lastName = null;
 		void UpdateData(int role,string name) {
+			lastRole = role;
+			lastName = name;
+
 			string sql = "SELECT UserId,Email,FirstName+' '+LastName as Name, CASE Gender WHEN 'M' THEN 'Male' ELSE 'Female' END, DateOfBirth, Phone, RoleName FROM Users,Role WHERE Users.RoleId=Role.RoldId";
 			List<object> args = new List<object>();
 			int argIndex = 0;
@@ -112,6 +117,25 @@ namespace SunshineAirlines.Forms.Admin {
 			}
 			curPage = index;
 			UpdatePage();
+		}
+
+		private void button1_Click(object sender, EventArgs e) {
+			var form = new EditUser(null);
+			if (form.ShowDialog() == DialogResult.OK) {
+				UpdateData(lastRole, lastName);
+			}
+		}
+
+		private void btnEdit_Click(object sender, EventArgs e) {
+			if(dataGridView.SelectedCells.Count == 0) {
+				MessageBox.Show("Please select a user!");
+				return;
+			}
+			int id = (int)(dataGridView.Rows[dataGridView.SelectedCells[0].RowIndex].DataBoundItem as DataRowView)["UserId"];
+			var form = new EditUser(id);
+			if (form.ShowDialog() == DialogResult.OK) {
+				UpdateData(lastRole, lastName);
+			}
 		}
 	}
 }

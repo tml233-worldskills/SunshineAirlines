@@ -13,7 +13,7 @@ namespace SunshineAirlines {
 		static void Main() {
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Forms.Admin.UserManagement());
+			Application.Run(new Forms.Login());
 		}
 	}
 }

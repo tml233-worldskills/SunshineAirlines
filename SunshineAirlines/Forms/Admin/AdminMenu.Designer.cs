@@ -63,6 +63,7 @@
 			this.userManagementToolStripMenuItem.Name = "userManagementToolStripMenuItem";
 			this.userManagementToolStripMenuItem.Size = new System.Drawing.Size(128, 21);
 			this.userManagementToolStripMenuItem.Text = "User Management";
+			this.userManagementToolStripMenuItem.Click += new System.EventHandler(this.userManagementToolStripMenuItem_Click);
 			// 
 			// logoutToolStripMenuItem
 			// 

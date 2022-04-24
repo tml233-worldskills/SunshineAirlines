@@ -33,19 +33,19 @@
 			this.label2 = new System.Windows.Forms.Label();
 			this.dataGridView = new System.Windows.Forms.DataGridView();
 			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.btnFirstPage = new System.Windows.Forms.PictureBox();
-			this.btnPreviousPage = new System.Windows.Forms.PictureBox();
 			this.comboPage = new System.Windows.Forms.ComboBox();
-			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.lblInfo = new System.Windows.Forms.Label();
 			this.btnEdit = new System.Windows.Forms.Button();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.pictureBox2 = new System.Windows.Forms.PictureBox();
+			this.btnPreviousPage = new System.Windows.Forms.PictureBox();
+			this.btnFirstPage = new System.Windows.Forms.PictureBox();
 			this.panel1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.btnFirstPage)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.btnPreviousPage)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.btnPreviousPage)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.btnFirstPage)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -85,6 +85,7 @@
 			this.button1.TabIndex = 5;
 			this.button1.Text = "Add a new user";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// btnSearch
 			// 
@@ -147,6 +148,7 @@
 			this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1});
 			this.dataGridView.Location = new System.Drawing.Point(13, 127);
+			this.dataGridView.MultiSelect = false;
 			this.dataGridView.Name = "dataGridView";
 			this.dataGridView.ReadOnly = true;
 			this.dataGridView.RowTemplate.Height = 23;
@@ -161,30 +163,6 @@
 			this.Column1.ReadOnly = true;
 			this.Column1.Visible = false;
 			// 
-			// btnFirstPage
-			// 
-			this.btnFirstPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.btnFirstPage.Image = global::SunshineAirlines.Properties.Resources.firstPage;
-			this.btnFirstPage.Location = new System.Drawing.Point(12, 419);
-			this.btnFirstPage.Name = "btnFirstPage";
-			this.btnFirstPage.Size = new System.Drawing.Size(32, 32);
-			this.btnFirstPage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.btnFirstPage.TabIndex = 6;
-			this.btnFirstPage.TabStop = false;
-			this.btnFirstPage.Click += new System.EventHandler(this.btnFirstPage_Click);
-			// 
-			// btnPreviousPage
-			// 
-			this.btnPreviousPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.btnPreviousPage.Image = global::SunshineAirlines.Properties.Resources.previousPage;
-			this.btnPreviousPage.Location = new System.Drawing.Point(50, 419);
-			this.btnPreviousPage.Name = "btnPreviousPage";
-			this.btnPreviousPage.Size = new System.Drawing.Size(32, 32);
-			this.btnPreviousPage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.btnPreviousPage.TabIndex = 7;
-			this.btnPreviousPage.TabStop = false;
-			this.btnPreviousPage.Click += new System.EventHandler(this.btnPreviousPage_Click);
-			// 
 			// comboPage
 			// 
 			this.comboPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -196,6 +174,29 @@
 			this.comboPage.Size = new System.Drawing.Size(68, 27);
 			this.comboPage.TabIndex = 8;
 			this.comboPage.SelectedIndexChanged += new System.EventHandler(this.comboPage_SelectedIndexChanged);
+			// 
+			// lblInfo
+			// 
+			this.lblInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.lblInfo.AutoSize = true;
+			this.lblInfo.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblInfo.Location = new System.Drawing.Point(238, 423);
+			this.lblInfo.Name = "lblInfo";
+			this.lblInfo.Size = new System.Drawing.Size(39, 24);
+			this.lblInfo.TabIndex = 6;
+			this.lblInfo.Text = "Info";
+			// 
+			// btnEdit
+			// 
+			this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnEdit.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnEdit.Location = new System.Drawing.Point(706, 419);
+			this.btnEdit.Name = "btnEdit";
+			this.btnEdit.Size = new System.Drawing.Size(82, 32);
+			this.btnEdit.TabIndex = 6;
+			this.btnEdit.Text = "Edit";
+			this.btnEdit.UseVisualStyleBackColor = true;
+			this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
 			// 
 			// pictureBox1
 			// 
@@ -221,27 +222,29 @@
 			this.pictureBox2.TabStop = false;
 			this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
 			// 
-			// lblInfo
+			// btnPreviousPage
 			// 
-			this.lblInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.lblInfo.AutoSize = true;
-			this.lblInfo.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblInfo.Location = new System.Drawing.Point(238, 423);
-			this.lblInfo.Name = "lblInfo";
-			this.lblInfo.Size = new System.Drawing.Size(39, 24);
-			this.lblInfo.TabIndex = 6;
-			this.lblInfo.Text = "Info";
+			this.btnPreviousPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btnPreviousPage.Image = global::SunshineAirlines.Properties.Resources.previousPage;
+			this.btnPreviousPage.Location = new System.Drawing.Point(50, 419);
+			this.btnPreviousPage.Name = "btnPreviousPage";
+			this.btnPreviousPage.Size = new System.Drawing.Size(32, 32);
+			this.btnPreviousPage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.btnPreviousPage.TabIndex = 7;
+			this.btnPreviousPage.TabStop = false;
+			this.btnPreviousPage.Click += new System.EventHandler(this.btnPreviousPage_Click);
 			// 
-			// btnEdit
+			// btnFirstPage
 			// 
-			this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnEdit.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnEdit.Location = new System.Drawing.Point(706, 419);
-			this.btnEdit.Name = "btnEdit";
-			this.btnEdit.Size = new System.Drawing.Size(82, 32);
-			this.btnEdit.TabIndex = 6;
-			this.btnEdit.Text = "Edit";
-			this.btnEdit.UseVisualStyleBackColor = true;
+			this.btnFirstPage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+			this.btnFirstPage.Image = global::SunshineAirlines.Properties.Resources.firstPage;
+			this.btnFirstPage.Location = new System.Drawing.Point(12, 419);
+			this.btnFirstPage.Name = "btnFirstPage";
+			this.btnFirstPage.Size = new System.Drawing.Size(32, 32);
+			this.btnFirstPage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.btnFirstPage.TabIndex = 6;
+			this.btnFirstPage.TabStop = false;
+			this.btnFirstPage.Click += new System.EventHandler(this.btnFirstPage_Click);
 			// 
 			// UserManagement
 			// 
@@ -264,10 +267,10 @@
 			this.panel1.ResumeLayout(false);
 			this.panel1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.btnFirstPage)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.btnPreviousPage)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.btnPreviousPage)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.btnFirstPage)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

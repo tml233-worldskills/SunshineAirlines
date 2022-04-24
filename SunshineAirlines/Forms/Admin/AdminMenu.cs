@@ -24,5 +24,12 @@ namespace SunshineAirlines.Forms.Admin {
 			Login.Quitting = true;
 			Close();
 		}
+
+		private void userManagementToolStripMenuItem_Click(object sender, EventArgs e) {
+			var form = new UserManagement {
+				MdiParent = this
+			};
+			form.Show();
+		}
 	}
 }
