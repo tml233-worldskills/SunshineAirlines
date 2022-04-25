@@ -14,7 +14,7 @@ namespace SunshineAirlines {
 		public static string ResourceRoot = "./Resources/";
 
 		public static (SqlConnection, SqlCommand) Prepare(string sql, params object[] args) {
-			var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["db"].ConnectionString);
+			var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["SunshineAirlines.Properties.Settings.db"].ConnectionString);
 			var cmd = new SqlCommand(sql, conn);
 			for (int i = 0; i < args.Length; i += 1) {
 				cmd.Parameters.AddWithValue("@" + i, args[i]);

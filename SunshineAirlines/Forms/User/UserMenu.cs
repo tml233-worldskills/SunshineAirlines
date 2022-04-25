@@ -38,5 +38,12 @@ namespace SunshineAirlines.Forms.User {
 			};
 			form.Show();
 		}
+
+		private void flightStatusToolStripMenuItem_Click(object sender, EventArgs e) {
+			var form = new FlightStatus() {
+				MdiParent = this
+			};
+			form.Show();
+		}
 	}
 }

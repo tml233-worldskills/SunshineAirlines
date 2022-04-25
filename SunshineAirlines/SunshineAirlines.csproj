@@ -105,6 +105,11 @@
     <Compile Include="Forms\User\FlightStatus.Designer.cs">
       <DependentUpon>FlightStatus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\User\FlightStatusDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FlightStatusDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\User\FoodItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -151,6 +156,7 @@
     <EmbeddedResource Include="Forms\User\FlightStatus.resx">
       <DependentUpon>FlightStatus.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User\FlightStatusReport.rdlc" />
     <EmbeddedResource Include="Forms\User\FoodItem.resx">
       <DependentUpon>FoodItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +179,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Forms\User\FlightStatusDataSet.xsc">
+      <DependentUpon>FlightStatusDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Forms\User\FlightStatusDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FlightStatusDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Forms\User\FlightStatusDataSet.xss">
+      <DependentUpon>FlightStatusDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

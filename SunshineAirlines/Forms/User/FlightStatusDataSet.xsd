@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FlightStatusDataSet" targetNamespace="http://tempuri.org/FlightStatusDataSet.xsd" xmlns:mstns="http://tempuri.org/FlightStatusDataSet.xsd" xmlns="http://tempuri.org/FlightStatusDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="db" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="db (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SunshineAirlines.Properties.Settings.GlobalReference.Default.db" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FlightStatusDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="FlightStatusDataSet" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="FlightStatusDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Schedule" msprop:Generator_RowClassName="ScheduleRow" msprop:Generator_RowEvHandlerName="ScheduleRowChangeEventHandler" msprop:Generator_RowDeletedName="ScheduleRowDeleted" msprop:Generator_RowDeletingName="ScheduleRowDeleting" msprop:Generator_RowEvArgName="ScheduleRowChangeEvent" msprop:Generator_TablePropName="Schedule" msprop:Generator_RowChangedName="ScheduleRowChanged" msprop:Generator_UserTableName="Schedule" msprop:Generator_RowChangingName="ScheduleRowChanging" msprop:Generator_TableClassName="ScheduleDataTable" msprop:Generator_TableVarName="tableSchedule">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FlightNumber" msprop:Generator_UserColumnName="FlightNumber" msprop:Generator_ColumnPropNameInTable="FlightNumberColumn" msprop:Generator_ColumnPropNameInRow="FlightNumber" msprop:Generator_ColumnVarNameInTable="columnFlightNumber">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="From" msdata:ReadOnly="true" msprop:Generator_UserColumnName="From" msprop:Generator_ColumnPropNameInTable="FromColumn" msprop:Generator_ColumnPropNameInRow="From" msprop:Generator_ColumnVarNameInTable="columnFrom" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="61" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="To" msdata:ReadOnly="true" msprop:Generator_UserColumnName="To" msprop:Generator_ColumnPropNameInTable="ToColumn" msprop:Generator_ColumnPropNameInRow="To" msprop:Generator_ColumnVarNameInTable="columnTo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="61" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ScheduleStart" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ScheduleStart" msprop:Generator_ColumnPropNameInTable="ScheduleStartColumn" msprop:Generator_ColumnPropNameInRow="ScheduleStart" msprop:Generator_ColumnVarNameInTable="columnScheduleStart" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ScheduleArrival" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ScheduleArrival" msprop:Generator_ColumnPropNameInTable="ScheduleArrivalColumn" msprop:Generator_ColumnPropNameInRow="ScheduleArrival" msprop:Generator_ColumnVarNameInTable="columnScheduleArrival" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ActualArrival" msdata:ReadOnly="true" msprop:Generator_UserColumnName="ActualArrival" msprop:Generator_ColumnPropNameInTable="ActualArrivalColumn" msprop:Generator_ColumnPropNameInRow="ActualArrival" msprop:Generator_ColumnVarNameInTable="columnActualArrival" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Gate" msprop:Generator_UserColumnName="Gate" msprop:Generator_ColumnPropNameInTable="GateColumn" msprop:Generator_ColumnPropNameInRow="Gate" msprop:Generator_ColumnVarNameInTable="columnGate">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Status" msdata:ReadOnly="true" msprop:Generator_UserColumnName="Status" msprop:Generator_ColumnPropNameInTable="StatusColumn" msprop:Generator_ColumnPropNameInRow="Status" msprop:Generator_ColumnVarNameInTable="columnStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="46" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

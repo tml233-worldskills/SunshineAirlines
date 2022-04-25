@@ -65,6 +65,7 @@
 			this.flightStatusToolStripMenuItem.Name = "flightStatusToolStripMenuItem";
 			this.flightStatusToolStripMenuItem.Size = new System.Drawing.Size(90, 21);
 			this.flightStatusToolStripMenuItem.Text = "Flight Status";
+			this.flightStatusToolStripMenuItem.Click += new System.EventHandler(this.flightStatusToolStripMenuItem_Click);
 			// 
 			// logoutToolStripMenuItem
 			// 
