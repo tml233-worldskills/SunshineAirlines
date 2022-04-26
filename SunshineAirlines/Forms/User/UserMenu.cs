@@ -21,8 +21,10 @@ namespace SunshineAirlines.Forms.User {
 		}
 
 		private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
-			Login.Quitting = true;
-			Close();
+			if (MessageBox.Show("Are you sure to exit?", "Exit", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+				Login.Quitting = true;
+				Close();
+			}
 		}
 
 		private void searchFlightsToolStripMenuItem_Click(object sender, EventArgs e) {

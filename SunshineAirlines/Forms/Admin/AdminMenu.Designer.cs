@@ -51,6 +51,7 @@
 			this.flightScheduleManagementToolStripMenuItem.Name = "flightScheduleManagementToolStripMenuItem";
 			this.flightScheduleManagementToolStripMenuItem.Size = new System.Drawing.Size(188, 21);
 			this.flightScheduleManagementToolStripMenuItem.Text = "Flight Schedule Management";
+			this.flightScheduleManagementToolStripMenuItem.Click += new System.EventHandler(this.flightScheduleManagementToolStripMenuItem_Click);
 			// 
 			// ticketStatisticsToolStripMenuItem
 			// 

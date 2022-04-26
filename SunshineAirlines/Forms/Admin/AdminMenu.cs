@@ -21,12 +21,21 @@ namespace SunshineAirlines.Forms.Admin {
 		}
 
 		private void exitToolStripMenuItem_Click(object sender, EventArgs e) {
-			Login.Quitting = true;
-			Close();
+			if (MessageBox.Show("Are you sure to exit?", "Exit", MessageBoxButtons.YesNo) == DialogResult.Yes) {
+				Login.Quitting = true;
+				Close();
+			}
 		}
 
 		private void userManagementToolStripMenuItem_Click(object sender, EventArgs e) {
 			var form = new UserManagement {
+				MdiParent = this
+			};
+			form.Show();
+		}
+
+		private void flightScheduleManagementToolStripMenuItem_Click(object sender, EventArgs e) {
+			var form = new FlightScheduleManagement {
 				MdiParent = this
 			};
 			form.Show();
