@@ -97,7 +97,7 @@ namespace SunshineAirlines.Forms.Admin {
 				return;
 			}
 			int id = (int)(dataGridView.Rows[e.RowIndex].DataBoundItem as DataRowView)["ScheduleId"];
-			MessageBox.Show(id.ToString());
+			new TicketSalesDetail(id).ShowDialog();
 		}
 
 		private void btnEdit_Click(object sender, EventArgs e) {
