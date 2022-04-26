@@ -36,7 +36,7 @@ namespace SunshineAirlines {
 			}
 		}
 
-		public static DataTable ExecuteQuery(string sql, params object[] args) {
+		public static DataTable ExecuteTable(string sql, params object[] args) {
 			var pair = Prepare(sql, args);
 			var conn = pair.Item1;
 			var cmd = pair.Item2;

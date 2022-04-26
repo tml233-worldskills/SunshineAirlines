@@ -98,7 +98,7 @@ namespace SunshineAirlines.Forms {
 				return;
 			}
 
-			var table = Utils.ExecuteQuery("SELECT UserId,RoleId FROM Users WHERE Email=@0 AND Password=@1", email, pwd);
+			var table = Utils.ExecuteTable("SELECT UserId,RoleId FROM Users WHERE Email=@0 AND Password=@1", email, pwd);
 			if (table.Rows.Count == 0) {
 				if (File.Exists(SessionFilePath)) {
 					File.Delete(SessionFilePath);

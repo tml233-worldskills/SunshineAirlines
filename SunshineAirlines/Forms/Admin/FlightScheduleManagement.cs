@@ -71,7 +71,7 @@ namespace SunshineAirlines.Forms.Admin {
 			} else {
 				sql += " AND CityFrom.CityCode=@2 AND CityTo.CityCode=@3";
 			}
-			dataGridView.DataSource = Utils.ExecuteQuery(sql, lastDateFrom, lastDateTo, lastFrom, lastTo);
+			dataGridView.DataSource = Utils.ExecuteTable(sql, lastDateFrom, lastDateTo, lastFrom, lastTo);
 		}
 
 

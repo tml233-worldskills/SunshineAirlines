@@ -70,7 +70,7 @@ namespace SunshineAirlines.Forms.Admin {
 				argIndex += 1;
 				args.Add("%"+name+"%");
 			}
-			table = Utils.ExecuteQuery(sql, args.ToArray());
+			table = Utils.ExecuteTable(sql, args.ToArray());
 			if (table.Rows.Count == 0) {
 				table = null;
 				dataGridView.DataSource = null;

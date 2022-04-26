@@ -27,7 +27,7 @@ namespace SunshineAirlines.Forms.User {
 		}
 
 		void RefreshData(DateTime? date) {
-			var table = Utils.ExecuteQuery(sql, date.HasValue, date ?? DateTime.Today);
+			var table = Utils.ExecuteTable(sql, date.HasValue, date ?? DateTime.Today);
 			var ds = new ReportDataSource("DataSet1", table);
 			reportViewer.LocalReport.DataSources.Clear();
 			reportViewer.LocalReport.DataSources.Add(ds);

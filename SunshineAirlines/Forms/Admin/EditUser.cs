@@ -24,7 +24,7 @@ namespace SunshineAirlines.Forms.Admin {
 			if (editing.HasValue) {
 				lblTitle.Text = "Edit User";
 				inputEmail.Enabled = false;
-				var table = Utils.ExecuteQuery("SELECT Email,RoleId,Gender,FirstName,LastName,Phone,Address,DateOfBirth,Photo FROM Users WHERE UserId=@0", editing);
+				var table = Utils.ExecuteTable("SELECT Email,RoleId,Gender,FirstName,LastName,Phone,Address,DateOfBirth,Photo FROM Users WHERE UserId=@0", editing);
 				if (table.Rows.Count == 0) {
 					MessageBox.Show("User not found!");
 					Close();
