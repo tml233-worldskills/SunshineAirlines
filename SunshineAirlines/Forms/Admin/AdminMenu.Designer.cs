@@ -58,6 +58,7 @@
 			this.ticketStatisticsToolStripMenuItem.Name = "ticketStatisticsToolStripMenuItem";
 			this.ticketStatisticsToolStripMenuItem.Size = new System.Drawing.Size(108, 21);
 			this.ticketStatisticsToolStripMenuItem.Text = "Ticket Statistics";
+			this.ticketStatisticsToolStripMenuItem.Click += new System.EventHandler(this.ticketStatisticsToolStripMenuItem_Click);
 			// 
 			// userManagementToolStripMenuItem
 			// 

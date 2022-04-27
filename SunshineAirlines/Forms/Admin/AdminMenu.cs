@@ -40,5 +40,12 @@ namespace SunshineAirlines.Forms.Admin {
 			};
 			form.Show();
 		}
+
+		private void ticketStatisticsToolStripMenuItem_Click(object sender, EventArgs e) {
+			var form = new TicketStatistics {
+				MdiParent = this
+			};
+			form.Show();
+		}
 	}
 }
