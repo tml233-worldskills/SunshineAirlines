@@ -24,19 +24,19 @@
 		/// </summary>
 		private void InitializeComponent() {
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.lblPrice = new System.Windows.Forms.Label();
-			this.lblCabinType = new System.Windows.Forms.Label();
 			this.lblFlights = new System.Windows.Forms.Label();
+			this.lblCabinType = new System.Windows.Forms.Label();
+			this.lblPrice = new System.Windows.Forms.Label();
 			this.panel2 = new System.Windows.Forms.Panel();
+			this.lblFromTime = new System.Windows.Forms.Label();
+			this.lblFromPlace = new System.Windows.Forms.Label();
 			this.panel4 = new System.Windows.Forms.Panel();
+			this.lblTickets = new System.Windows.Forms.Label();
 			this.lblTotalTime = new System.Windows.Forms.Label();
 			this.lblStop = new System.Windows.Forms.Label();
-			this.lblTickets = new System.Windows.Forms.Label();
 			this.radioButton = new System.Windows.Forms.RadioButton();
 			this.panel5 = new System.Windows.Forms.Panel();
 			this.lblTransfer = new System.Windows.Forms.Label();
-			this.lblFromPlace = new System.Windows.Forms.Label();
-			this.lblFromTime = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.lblToTime = new System.Windows.Forms.Label();
 			this.lblToPlace = new System.Windows.Forms.Label();
@@ -60,17 +60,17 @@
 			this.panel1.Size = new System.Drawing.Size(152, 189);
 			this.panel1.TabIndex = 1;
 			// 
-			// lblPrice
+			// lblFlights
 			// 
-			this.lblPrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.lblFlights.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.lblPrice.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPrice.Location = new System.Drawing.Point(3, 0);
-			this.lblPrice.Name = "lblPrice";
-			this.lblPrice.Size = new System.Drawing.Size(144, 23);
-			this.lblPrice.TabIndex = 0;
-			this.lblPrice.Text = "$0.00";
-			this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			this.lblFlights.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblFlights.Location = new System.Drawing.Point(3, 46);
+			this.lblFlights.Name = "lblFlights";
+			this.lblFlights.Size = new System.Drawing.Size(144, 141);
+			this.lblFlights.TabIndex = 2;
+			this.lblFlights.Text = "Flight 000";
 			// 
 			// lblCabinType
 			// 
@@ -84,17 +84,17 @@
 			this.lblCabinType.Text = "Economy";
 			this.lblCabinType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// lblFlights
+			// lblPrice
 			// 
-			this.lblFlights.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+			this.lblPrice.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.lblFlights.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblFlights.Location = new System.Drawing.Point(3, 46);
-			this.lblFlights.Name = "lblFlights";
-			this.lblFlights.Size = new System.Drawing.Size(144, 141);
-			this.lblFlights.TabIndex = 2;
-			this.lblFlights.Text = "Flight 000";
+			this.lblPrice.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblPrice.Location = new System.Drawing.Point(3, 0);
+			this.lblPrice.Name = "lblPrice";
+			this.lblPrice.Size = new System.Drawing.Size(144, 23);
+			this.lblPrice.TabIndex = 0;
+			this.lblPrice.Text = "$0.00";
+			this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// panel2
 			// 
@@ -108,6 +108,28 @@
 			this.panel2.Size = new System.Drawing.Size(413, 68);
 			this.panel2.TabIndex = 2;
 			// 
+			// lblFromTime
+			// 
+			this.lblFromTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.lblFromTime.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblFromTime.Location = new System.Drawing.Point(188, 0);
+			this.lblFromTime.Name = "lblFromTime";
+			this.lblFromTime.Size = new System.Drawing.Size(220, 66);
+			this.lblFromTime.TabIndex = 1;
+			this.lblFromTime.Text = "2018-06-25  12:12:12\r\n2018-06-25  12:12:12";
+			this.lblFromTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// lblFromPlace
+			// 
+			this.lblFromPlace.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblFromPlace.Location = new System.Drawing.Point(3, 0);
+			this.lblFromPlace.Name = "lblFromPlace";
+			this.lblFromPlace.Size = new System.Drawing.Size(179, 66);
+			this.lblFromPlace.TabIndex = 0;
+			this.lblFromPlace.Text = "Hong Kong/HKG\r\nHong Kong/HKG";
+			this.lblFromPlace.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
 			// panel4
 			// 
 			this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -120,6 +142,18 @@
 			this.panel4.Name = "panel4";
 			this.panel4.Size = new System.Drawing.Size(196, 189);
 			this.panel4.TabIndex = 3;
+			// 
+			// lblTickets
+			// 
+			this.lblTickets.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.lblTickets.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblTickets.Location = new System.Drawing.Point(3, 164);
+			this.lblTickets.Name = "lblTickets";
+			this.lblTickets.Size = new System.Drawing.Size(188, 23);
+			this.lblTickets.TabIndex = 2;
+			this.lblTickets.Text = "114 available tickets";
+			this.lblTickets.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// lblTotalTime
 			// 
@@ -146,18 +180,6 @@
 			this.lblStop.Text = "Non-Stop";
 			this.lblStop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// lblTickets
-			// 
-			this.lblTickets.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.lblTickets.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblTickets.Location = new System.Drawing.Point(3, 164);
-			this.lblTickets.Name = "lblTickets";
-			this.lblTickets.Size = new System.Drawing.Size(188, 23);
-			this.lblTickets.TabIndex = 2;
-			this.lblTickets.Text = "114 available tickets";
-			this.lblTickets.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
 			// radioButton
 			// 
 			this.radioButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -170,6 +192,7 @@
 			this.radioButton.TabStop = true;
 			this.radioButton.Text = "Select";
 			this.radioButton.UseVisualStyleBackColor = true;
+			this.radioButton.CheckedChanged += new System.EventHandler(this.radioButton_CheckedChanged);
 			// 
 			// panel5
 			// 
@@ -193,28 +216,6 @@
 			this.lblTransfer.TabIndex = 0;
 			this.lblTransfer.Text = "2h 30m Transfer in Hong Kong/HKG";
 			this.lblTransfer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// lblFromPlace
-			// 
-			this.lblFromPlace.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblFromPlace.Location = new System.Drawing.Point(3, 0);
-			this.lblFromPlace.Name = "lblFromPlace";
-			this.lblFromPlace.Size = new System.Drawing.Size(179, 66);
-			this.lblFromPlace.TabIndex = 0;
-			this.lblFromPlace.Text = "Hong Kong/HKG\r\nHong Kong/HKG";
-			this.lblFromPlace.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblFromTime
-			// 
-			this.lblFromTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.lblFromTime.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblFromTime.Location = new System.Drawing.Point(188, 0);
-			this.lblFromTime.Name = "lblFromTime";
-			this.lblFromTime.Size = new System.Drawing.Size(220, 66);
-			this.lblFromTime.TabIndex = 1;
-			this.lblFromTime.Text = "2018-06-25  12:12:12\r\n2018-06-25  12:12:12";
-			this.lblFromTime.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// panel3
 			// 
@@ -250,7 +251,7 @@
 			this.lblToPlace.Text = "Hong Kong/HKG\r\nHong Kong/HKG";
 			this.lblToPlace.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
-			// FlightItemA
+			// FlightItem
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -261,8 +262,9 @@
 			this.Controls.Add(this.panel4);
 			this.Controls.Add(this.panel2);
 			this.Controls.Add(this.panel1);
-			this.Name = "FlightItemA";
+			this.Name = "FlightItem";
 			this.Size = new System.Drawing.Size(874, 195);
+			this.Load += new System.EventHandler(this.FlightItem_Load);
 			this.panel1.ResumeLayout(false);
 			this.panel2.ResumeLayout(false);
 			this.panel4.ResumeLayout(false);

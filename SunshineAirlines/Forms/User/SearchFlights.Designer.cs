@@ -46,12 +46,17 @@
 			this.btnSearch = new System.Windows.Forms.Button();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.panelDeparture = new System.Windows.Forms.FlowLayoutPanel();
+			this.panel3 = new System.Windows.Forms.Panel();
+			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.panelReturn = new System.Windows.Forms.FlowLayoutPanel();
 			this.panel1.SuspendLayout();
 			this.flowLayoutPanel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			this.panelReturnDate.SuspendLayout();
 			this.panel4.SuspendLayout();
 			this.groupBox1.SuspendLayout();
+			this.panel3.SuspendLayout();
+			this.groupBox2.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -284,6 +289,7 @@
 			this.btnSearch.TabIndex = 11;
 			this.btnSearch.Text = "Search";
 			this.btnSearch.UseVisualStyleBackColor = true;
+			this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
 			// 
 			// groupBox1
 			// 
@@ -291,28 +297,69 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.groupBox1.Controls.Add(this.panelDeparture);
 			this.groupBox1.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.groupBox1.Location = new System.Drawing.Point(12, 133);
+			this.groupBox1.Location = new System.Drawing.Point(0, 0);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(1160, 244);
+			this.groupBox1.Size = new System.Drawing.Size(1126, 307);
 			this.groupBox1.TabIndex = 3;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Departure Flights";
 			// 
 			// panelDeparture
 			// 
+			this.panelDeparture.AutoScroll = true;
 			this.panelDeparture.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.panelDeparture.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+			this.panelDeparture.Font = new System.Drawing.Font("宋体", 9F);
 			this.panelDeparture.Location = new System.Drawing.Point(3, 27);
 			this.panelDeparture.Name = "panelDeparture";
-			this.panelDeparture.Size = new System.Drawing.Size(1154, 214);
+			this.panelDeparture.Size = new System.Drawing.Size(1120, 277);
 			this.panelDeparture.TabIndex = 0;
+			this.panelDeparture.WrapContents = false;
+			// 
+			// panel3
+			// 
+			this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.panel3.AutoScroll = true;
+			this.panel3.Controls.Add(this.groupBox2);
+			this.panel3.Controls.Add(this.groupBox1);
+			this.panel3.Location = new System.Drawing.Point(12, 135);
+			this.panel3.Name = "panel3";
+			this.panel3.Size = new System.Drawing.Size(1160, 409);
+			this.panel3.TabIndex = 4;
+			// 
+			// groupBox2
+			// 
+			this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.groupBox2.Controls.Add(this.panelReturn);
+			this.groupBox2.Font = new System.Drawing.Font("TeXGyreAdventor", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.groupBox2.Location = new System.Drawing.Point(0, 313);
+			this.groupBox2.Name = "groupBox2";
+			this.groupBox2.Size = new System.Drawing.Size(1126, 307);
+			this.groupBox2.TabIndex = 4;
+			this.groupBox2.TabStop = false;
+			this.groupBox2.Text = "Return Flights";
+			// 
+			// panelReturn
+			// 
+			this.panelReturn.AutoScroll = true;
+			this.panelReturn.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.panelReturn.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+			this.panelReturn.Font = new System.Drawing.Font("宋体", 9F);
+			this.panelReturn.Location = new System.Drawing.Point(3, 27);
+			this.panelReturn.Name = "panelReturn";
+			this.panelReturn.Size = new System.Drawing.Size(1120, 277);
+			this.panelReturn.TabIndex = 0;
+			this.panelReturn.WrapContents = false;
 			// 
 			// SearchFlights
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1184, 556);
-			this.Controls.Add(this.groupBox1);
+			this.Controls.Add(this.panel3);
 			this.Controls.Add(this.panel1);
 			this.Controls.Add(this.label1);
 			this.Name = "SearchFlights";
@@ -327,6 +374,8 @@
 			this.panel4.ResumeLayout(false);
 			this.panel4.PerformLayout();
 			this.groupBox1.ResumeLayout(false);
+			this.panel3.ResumeLayout(false);
+			this.groupBox2.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -356,5 +405,8 @@
 		private System.Windows.Forms.Panel panelReturnDate;
 		private System.Windows.Forms.Panel panel4;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+		private System.Windows.Forms.Panel panel3;
+		private System.Windows.Forms.GroupBox groupBox2;
+		private System.Windows.Forms.FlowLayoutPanel panelReturn;
 	}
 }
